@@ -1,0 +1,45 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "ooouno-ex"
+version = "3.0.0"
+description = "Examples for LibreOffice python"
+license = "MIT"
+readme = "README.md"
+authors = [
+    ":Barry-Thomas-Paul: Moss <bigbytetech@gmail.com>"
+]
+homepage = "https://github.com/Amourspirit/python-ooouno-ex"
+documentation = "https://github.com/Amourspirit/python-ooouno-ex"
+repository = "https://github.com/Amourspirit/python-ooouno-ex"
+
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+oooscript = ">=2.1.1"
+types-access2base = ">=1.0.2"
+types-scriptforge = ">=2.0.1"
+types-unopy = ">=1.0.3"
+unotools = ">=0.3.3"
+verr = ">=1.1.2"
+kwargshelper = ">=2.7.1"
+ooo-dev-tools-gui-win = { version = ">=0.3.1", markers = "sys_platform == 'win32'" }
+ooo-dev-tools = ">=0.50.0"
+oooenv = "^0.2.4"
+pandas = "^2.2.3"
+pytest = "^8.3.5"
+
+[tool.poetry.group.dev.dependencies]
+black = ">=22.12.0"
+pdbpp = "^0.10.3"
+debugpy = "^1.8.1"
+
+[tool.ruff]
+ignore=["E501"]
+
+[[tool.poetry.source]]
+name = "mirrors"
+url = "https://mirrors.aliyun.com/pypi/simple/"
+priority = "primary"  # 设置为默认源
